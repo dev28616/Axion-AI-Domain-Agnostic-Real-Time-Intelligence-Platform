@@ -1,0 +1,5 @@
+event_id,source_id,event_value,source_name,description,timestamp
+claim_301,patient_x,150,City Clinic,Standard consultation CPT:99213,2025-09-15T09:00:00Z
+claim_302,patient_y,750,Metro Hospital,X-Ray and specialist visit CPT:73560,2025-09-15T09:05:00Z
+claim_303,patient_z,12500,Surgical Center,Complex procedure requiring review CPT:27447,2025-09-15T09:10:00Z
+claim_304,patient_x,200,City Clinic,Follow-up visit CPT:99214,2025-09-15T09:15:00Z

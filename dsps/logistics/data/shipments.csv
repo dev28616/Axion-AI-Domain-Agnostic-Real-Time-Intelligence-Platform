@@ -1,0 +1,8 @@
+event_id,source_id,event_value,source_name,description,timestamp
+txn_101,user_a,125.50,CoffeeBean Inc.,"Morning coffee and a pastry",2025-09-12T08:30:00Z
+txn_102,user_b,75.00,Bookworm Store,"New novel by an acclaimed author",2025-09-12T10:45:12Z
+txn_103,user_a,2500.00,GadgetGalaxy,"Purchase of new headphones",2025-09-12T11:15:30Z
+txn_104,user_c,45.20,QuickEats Deli,"Lunch sandwich and a drink",2025-09-12T12:05:00Z
+txn_105,user_b,300.75,Global Fashion,"Online order for a new shirt",2025-09-12T13:20:45Z
+txn_106,user_a,80.00,SuperMart,"Weekly grocery shopping trip",2025-09-12T14:00:55Z
+txn_107,user_d,15.00,CabExpress,"Taxi fare for John Doe in Mumbai",2025-09-12T15:30:00Z
