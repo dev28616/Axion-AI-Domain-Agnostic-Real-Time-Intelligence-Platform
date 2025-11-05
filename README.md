@@ -198,11 +198,6 @@ You can now open the **Streamlit UI** in your browser and start real-time AI pip
 
 ---
 
-✅ **Ready to use:**  
-- Just copy and paste this file into your GitHub repo as `README.md`.  
-- GitHub automatically supports Mermaid diagrams, emoji, and tables.  
-- You can later embed your GIF at the top by replacing the placeholder section with:
-
 ```markdown
-![Axion AI Demo](assets/axion_architecture.png)
+[Axion AI Demo](assets/axion_architecture.png)
 ```
