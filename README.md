@@ -204,5 +204,5 @@ You can now open the **Streamlit UI** in your browser and start real-time AI pip
 - You can later embed your GIF at the top by replacing the placeholder section with:
 
 ```markdown
-![Axion AI Demo](path/to/demo.gif)
+![Axion AI Demo](assets/axion_architecture.png)
 ```
