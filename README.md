@@ -192,12 +192,6 @@ You can now open the **Streamlit UI** in your browser and start real-time AI pip
 
 ---
 
-## 🧑‍💻 Author
-
 **Project Axion AI** — built for speed, resilience, and intelligence.
 
 ---
-
-## 🧩 3. High-Level Architecture Diagram
-
-![Axion AI System Architecture](assets/axion_architecture.png)
