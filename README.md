@@ -49,26 +49,26 @@ This allows instant adaptation to any domain — from **financial fraud preventi
 ```mermaid
 graph TD
     subgraph User & UI
-        UI_HUB["🚀 Interactive UI Hub<br/>(Streamlit)"]:::uiStyle
+        UI_HUB["🚀 Interactive UI Hub<br/>(Streamlit)"]
     end
 
     subgraph Kafka Event Bus (The "Nervous System")
         direction LR
-        KAFKA_INPUT(("[user-input-events]")):::kafkaStyle
-        KAFKA_RAW(("[domain-raw-events]")):::kafkaStyle
-        KAFKA_ANALYTICS(("[domain-analytics-results]")):::kafkaStyle
-        KAFKA_DECISIONS(("[domain-decisions]")):::kafkaStyle
+        KAFKA_INPUT(("[user-input-events]"))
+        KAFKA_RAW(("[domain-raw-events]"))
+        KAFKA_ANALYTICS(("[domain-analytics-results]"))
+        KAFKA_DECISIONS(("[domain-decisions]"))
     end
 
     subgraph "Axion Core Engine (Always-On Backend)"
         subgraph "Central Services (The 'Brain')"
-            MODEL_SERVER["Model Server (FastAPI)<br/>- NER Model<br/>- Vector Model"]:::serviceStyle
+            MODEL_SERVER["Model Server (FastAPI)<br/>- NER Model<br/>- Vector Model"]
         end
 
         subgraph "Autonomous Agents (The 'Workers')"
-            INGESTION["Ingestion Agent<br/>(Smart Router)"]:::agentStyle
-            ENRICHMENT["Enrichment Agent<br/>(AI & .joblib Models)"]:::agentStyle
-            DECISION["Decision Agent<br/>(Rule Engine)"]:::agentStyle
+            INGESTION["Ingestion Agent<br/>(Smart Router)"]
+            ENRICHMENT["Enrichment Agent<br/>(AI & .joblib Models)"]
+            DECISION["Decision Agent<br/>(Rule Engine)"]
         end
     end
 
@@ -83,11 +83,6 @@ graph TD
     DECISION -- "9. Produces Final Decision" --> KAFKA_DECISIONS
     KAFKA_DECISIONS -- "10. Consumes for Display" --> UI_HUB
 
-    %% Styling
-    classDef uiStyle fill:#E6F7FF,stroke:#007BFF,stroke-width:2px,color:#0056b3
-    classDef kafkaStyle fill:#F8F9FA,stroke:#ADB5BD,stroke-width:2px,shape:cylinder
-    classDef agentStyle fill:#E8F5E9,stroke:#28A745,stroke-width:2px
-    classDef serviceStyle fill:#FFF3CD,stroke:#FFC107,stroke-width:2px,color:#856404
 ```
 
 ---
