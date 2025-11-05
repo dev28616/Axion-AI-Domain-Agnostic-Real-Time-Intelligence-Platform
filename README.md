@@ -88,6 +88,7 @@ graph TD
     classDef kafkaStyle fill:#F8F9FA,stroke:#ADB5BD,stroke-width:2px,shape:cylinder
     classDef agentStyle fill:#E8F5E9,stroke:#28A745,stroke-width:2px
     classDef serviceStyle fill:#FFF3CD,stroke:#FFC107,stroke-width:2px,color:#856404
+    
 ## 🔍 4. Component Deep Dive
 
 ### 🧩 docker-compose.yml
