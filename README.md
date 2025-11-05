@@ -48,41 +48,40 @@ This allows instant adaptation to any domain — from **financial fraud preventi
 
 ```mermaid
 graph TD
-    subgraph User & UI
+    subgraph "User and UI"
         UI_HUB["🚀 Interactive UI Hub<br/>(Streamlit)"]
     end
 
-    subgraph Kafka Event Bus (The "Nervous System")
+    subgraph "Kafka Event Bus - The Nervous System"
         direction LR
-        KAFKA_INPUT(("[user-input-events]"))
-        KAFKA_RAW(("[domain-raw-events]"))
-        KAFKA_ANALYTICS(("[domain-analytics-results]"))
-        KAFKA_DECISIONS(("[domain-decisions]"))
+        KAFKA_INPUT["user-input-events"]
+        KAFKA_RAW["domain-raw-events"]
+        KAFKA_ANALYTICS["domain-analytics-results"]
+        KAFKA_DECISIONS["domain-decisions"]
     end
 
-    subgraph "Axion Core Engine (Always-On Backend)"
-        subgraph "Central Services (The 'Brain')"
-            MODEL_SERVER["Model Server (FastAPI)<br/>- NER Model<br/>- Vector Model"]
+    subgraph "Axion Core Engine - Always-On Backend"
+        subgraph "Central Services - The Brain"
+            MODEL_SERVER["Model Server (FastAPI)<br/>• NER Model<br/>• Vector Model"]
         end
 
-        subgraph "Autonomous Agents (The 'Workers')"
+        subgraph "Autonomous Agents - The Workers"
             INGESTION["Ingestion Agent<br/>(Smart Router)"]
             ENRICHMENT["Enrichment Agent<br/>(AI & .joblib Models)"]
             DECISION["Decision Agent<br/>(Rule Engine)"]
         end
     end
 
-    UI_HUB -- "1. User Submits Data" --> KAFKA_INPUT
-    KAFKA_INPUT -- "2. Consumes Input" --> INGESTION
-    INGESTION -- "3. Routes to Domain" --> KAFKA_RAW
-    KAFKA_RAW -- "4. Consumes Raw Event" --> ENRICHMENT
-    ENRICHMENT -- "5. Async API Call<br/>(PII Mask, Vectorize)" --> MODEL_SERVER
-    MODEL_SERVER -- "6. AI Results" --> ENRICHMENT
-    ENRICHMENT -- "7. Produces Enriched Result" --> KAFKA_ANALYTICS
-    KAFKA_ANALYTICS -- "8. Consumes Enriched Result" --> DECISION
-    DECISION -- "9. Produces Final Decision" --> KAFKA_DECISIONS
-    KAFKA_DECISIONS -- "10. Consumes for Display" --> UI_HUB
-
+    UI_HUB -->|"1️⃣ User Submits Data"| KAFKA_INPUT
+    KAFKA_INPUT -->|"2️⃣ Consumed by"| INGESTION
+    INGESTION -->|"3️⃣ Routed to Domain"| KAFKA_RAW
+    KAFKA_RAW -->|"4️⃣ Processed by"| ENRICHMENT
+    ENRICHMENT -->|"5️⃣ Async API Call → PII Mask + Vectorize"| MODEL_SERVER
+    MODEL_SERVER -->|"6️⃣ AI Results"| ENRICHMENT
+    ENRICHMENT -->|"7️⃣ Enriched Result"| KAFKA_ANALYTICS
+    KAFKA_ANALYTICS -->|"8️⃣ Consumed by"| DECISION
+    DECISION -->|"9️⃣ Produces Final Decision"| KAFKA_DECISIONS
+    KAFKA_DECISIONS -->|"🔟 Displayed in"| UI_HUB
 ```
 
 ---
@@ -157,7 +156,6 @@ docker-compose up --build -d
 ---
 
 ### Step 1.3 — Monitor Model Download (Optional)
-
 Watch the one-time model cache download.
 
 ```bash
@@ -170,7 +168,6 @@ docker-compose logs -f model_downloader
 ---
 
 ### Step 1.4 — Train DSP Models (Mandatory)
-
 Train scikit-learn models for each domain.
 
 ```bash
