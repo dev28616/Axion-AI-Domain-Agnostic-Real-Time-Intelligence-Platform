@@ -198,6 +198,6 @@ You can now open the **Streamlit UI** in your browser and start real-time AI pip
 
 ---
 
-```markdown
-[Axion AI Demo](assets/axion_architecture.png)
-```
+## 🧩 3. High-Level Architecture Diagram
+
+![Axion AI System Architecture](assets/axion_architecture.png)
