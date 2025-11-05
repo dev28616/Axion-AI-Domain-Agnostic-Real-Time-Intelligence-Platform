@@ -6,14 +6,6 @@ This repository contains the complete **"Golden Master" MVP** for **Axion AI** �
 
 ---
 
-## 🎬 Interactive Demo (Most Important Part)
-
-> **Author’s Note:**  
-> Record and embed a short GIF here showing the UI in action — selecting the **"Finance"** domain, clicking **"Start Pipeline"**, and seeing **real-time decisions** appear.  
-> This is the “wow” factor that proves your project works.
-
----
-
 ## 🧠 1. The Core Vision: Solving the “Decision Latency Gap”
 
 ### ❌ The Problem
