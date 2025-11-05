@@ -88,7 +88,10 @@ graph TD
     classDef kafkaStyle fill:#F8F9FA,stroke:#ADB5BD,stroke-width:2px,shape:cylinder
     classDef agentStyle fill:#E8F5E9,stroke:#28A745,stroke-width:2px
     classDef serviceStyle fill:#FFF3CD,stroke:#FFC107,stroke-width:2px,color:#856404
-    
+```
+
+---
+
 ## 🔍 4. Component Deep Dive
 
 ### 🧩 docker-compose.yml
@@ -144,6 +147,7 @@ Removes all old Docker states.
 
 ```bash
 docker system prune -a --volumes
+```
 Type `y` when prompted.
 
 ---
@@ -153,6 +157,7 @@ Builds Docker images and starts all services deterministically.
 
 ```bash
 docker-compose up --build -d
+```
 
 ---
 
@@ -162,6 +167,7 @@ Watch the one-time model cache download.
 
 ```bash
 docker-compose logs -f model_downloader
+```
 
 ✅ **Expected output:**  
 “All models have been downloaded and cached successfully.”
@@ -176,6 +182,9 @@ Train scikit-learn models for each domain.
 docker-compose exec axion_agents python scripts/train_finance_model.py
 docker-compose exec axion_agents python scripts/train_logistics_model.py
 docker-compose exec axion_agents python scripts/train_healthcare_model.py
+```
+
+---
 
 ## 🏁 Done!
 
@@ -204,3 +213,4 @@ You can now open the **Streamlit UI** in your browser and start real-time AI pip
 
 ```markdown
 ![Axion AI Demo](path/to/demo.gif)
+```
